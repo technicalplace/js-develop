@@ -20,3 +20,5 @@ const nameFn = () => {
 const calcFn = (num) => {
   return num * 10;
 };
+
+export { nameFn, calcFn };
