@@ -17,9 +17,11 @@ function arrayFn(arg) {
   return ['jQuery', 'Vue', arg];
 }
 
+const [first, second, third] = arrayFn('React');
+console.log(third);
 // 問題 2
-function objectFn() {
-  console.log();
+function objectFn({name: companyName}) {
+  console.log(companyName);
 }
 
 const argObject = {
