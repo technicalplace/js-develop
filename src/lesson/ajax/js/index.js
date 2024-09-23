@@ -21,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
       characterElement.removeChild(characterElement.lastChild);
     }
     
-
     axios.get(`https://pokeapi.co/api/v2/pokemon/${pictureBookId}`)
       .then(({
         data
@@ -48,8 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
           formElement.after(createErrorElement('エラーが発生しました。時間をおいて再度お試しください。'));
         })
       }).catch((error) => {
-        console.log(error);
-        console.log(error.response, error.response.status)
         switch (error.response && error.response.status) {
           case 404:
             formElement.after(createErrorElement(error.message));
